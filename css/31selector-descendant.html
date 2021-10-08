@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>descendant selector</title>
+    <style>
+        div p {   /*p 요소중 div를 조상으로 두고 있는 것들*/
+                  /* div의 자손인 p 들*/
+                  color: blueviolet;
+        }
+        body p {
+            text-decoration: underline;
+            
+        }
+        body > p {
+            font-size: 32px;
+        }
+        div + p {
+            font-style: italic;
+        }
+        div + p+p {    /* 두번째 p에 적용*/
+            font-size: 20px;
+        }
+        /* 선택자 : nth-of-type(수열)  */
+        p:nth-of-type(2),
+        p:nth-of-type(3),
+        p:nth-of-type(5) {
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- div*2>p>lorem^^p*2>lorem -->
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dignissimos necessitatibus atque, sit eum qui cupiditate quasi nobis ipsa perferendis ipsam velit magni, veritatis tempore. Error eius totam harum impedit?</p>
+    </div>
+    <div>
+        <p>Accusantium nesciunt aliquid aliquam, quo ea eligendi ipsa suscipit quaerat voluptates aperiam nobis nam, nemo sequi fugiat neque unde. Illum asperiores et a? Enim, beatae assumenda reiciendis maiores iure eaque.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse accusamus consequuntur, perferendis voluptas delectus nemo vero, sint facilis dicta sapiente sed eligendi beatae suscipit optio sunt, eius explicabo at tempora!</p>
+    <p>Blanditiis, praesentium! Magnam a ab at cumque, corporis blanditiis quisquam? Quam doloribus, architecto velit quasi, iste asperiores sit aliquid magni id quisquam vel nesciunt eos iure incidunt in nulla nihil!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis laborum quos iure cumque saepe id dolor, facilis autem iste labore? Quas praesentium eaque illum? Accusamus ducimus dignissimos quis exercitationem dolorem!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, numquam recusandae quo debitis vitae distinctio a libero ex voluptatibus dignissimos, veniam voluptas repellat dolor excepturi aspernatur architecto odio cupiditate quae.</p>
+    <p>Adipisci praesentium facilis laborum, sint ipsam pariatur dignissimos rem deserunt voluptatem soluta reprehenderit autem quaerat doloremque velit atque enim blanditiis consequuntur voluptas libero inventore mollitia error voluptatum et sequi? Nobis?</p>
+
+</body>
+</html>
