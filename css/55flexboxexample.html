@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>example</title>
+    <style>
+        .menu-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            align-items: center;
+        }
+
+        .left-menu, .right-menu , .upL-menu ,.upR-menu, .mid-content{
+            display: flex;
+        }
+        .menu-item {
+            padding: 5px 5px;
+            border-radius: 10px;
+        }
+
+        .menu-item:hover  {
+            background-color: seagreen;
+        }
+        .top-container {
+            display: flex;
+            height: 42px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            background-color: black;
+            color: white;
+        }
+        .top-container > .upL-menu >div {
+            align-items: center;
+        }
+
+        .button {
+            color: white;
+            background-color: violet;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            width: 100px;
+        }
+        .button:hover {
+            background-color: blue;
+        }
+        .logo {
+            font-size: 32px;
+            color: red;
+        }
+
+                /* 야.... */
+                .main-container {
+            display: flex;
+            margin-top: 7px;
+        }
+        .side-menu, .ad-container {
+            width: 200px;
+            background-color: silver;
+        }
+
+        .side-menu-item {
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .side-menu-item:hover {
+            color: white;
+            background-color: green;
+        }
+        .main-content {
+            flex: 1;
+            margin: 0px 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <!-- .up-menu>.menu-item*5 -->
+        <div class="upL-menu">
+            <div class="menu-item logo"><i class="fas fa-ambulance"></i></div>
+            <div class="menu-item">Tutorials</div>
+            <div class="menu-item">Refrences</div>
+            <div class="menu-item">Exercises</div>
+            <div class="menu-item">Video<i class="fas fa-caret-down"></i></div>
+        </div>
+        <!-- .up-menuR>.menu-item*4 -->
+        <up class="upR-menu">
+            <div class="menu-item"></div>
+            <div class="menu-item, button">Log in</div>
+            <div class="menu-item">Paid Courses</div>
+            <div class="menu-item"><i class="fas fa-users"></i></div>
+        </up>
+    </div>
+
+    <div class="menu-container">
+        <!-- .left-menu>.menu-item*5 -->
+        <div class="left-menu">
+            <div class="menu-item"><i class="fas fa-bars"></i></div>
+            <div class="menu-item"><i class="fas fa-house-damage"></i></div>
+            <div class="menu-item">HTML</div>
+            <div class="menu-item">CSS</div>
+            <div class="menu-item">JAVASCRIPT</div>
+        </div>
+        <div class="right-menu">
+            <div class="menu-item"><i class="fab fa-ethereum"></i></div>
+            <div class="menu-item"><i class="fas fa-kiss-wink-heart"></i></div>
+            <div class="menu-item"><i class="fas fa-heart-broken"></i></div>
+        </div>
+    </div>
+    
+<!-- .main-container>.side-menu+.main.content+.ad-container -->
+<div class="main-container">
+    <div class="side-menu">
+     <!-- .side-menu-item*20>lorem1 -->
+     <div class="side-menu-item">Lorem.</div>
+     <div class="side-menu-item">Rem!</div>
+     <div class="side-menu-item">Reiciendis?</div>
+     <div class="side-menu-item">Labore!</div>
+     <div class="side-menu-item">Deserunt!</div>
+     <div class="side-menu-item">Earum.</div>
+     <div class="side-menu-item">Nobis?</div>
+     <div class="side-menu-item">Voluptate.</div>
+     <div class="side-menu-item">Modi.</div>
+     <div class="side-menu-item">Nobis.</div>
+     <div class="side-menu-item">Ducimus.</div>
+     <div class="side-menu-item">Odit.</div>
+     <div class="side-menu-item">Alias.</div>
+     <div class="side-menu-item">Nesciunt?</div>
+     <div class="side-menu-item">Vitae!</div>
+     <div class="side-menu-item">Ullam!</div>
+     <div class="side-menu-item">Ab!</div>
+     <div class="side-menu-item">Quos!</div>
+     <div class="side-menu-item">Aut!</div>
+     <div class="side-menu-item">Quasi.</div>
+    </div>
+    
+    <div class="main content">
+        <!-- (h1>lorem3^p>lorem)*10 -->
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum commodi quas obcaecati sed unde velit veritatis veniam pariatur minima, voluptatibus cumque odio id, natus eius! Doloribus tempore eum exercitationem ad?</p>
+        <h1>Quisquam, natus velit!</h1>
+        <p>Ratione, quo nemo. Nemo iusto reiciendis rerum aspernatur exercitationem tempora dolor inventore incidunt nam quos quisquam pariatur fugiat iure non cumque sapiente animi at, esse neque atque porro. Eius, necessitatibus.</p>
+        <h1>Quo, exercitationem iusto!</h1>
+        <p>Reprehenderit quibusdam fugiat totam molestiae hic suscipit dicta ducimus libero nostrum? Dolor reiciendis quam culpa hic illo. Corrupti voluptate officiis at fuga corporis, quae, repellat magni praesentium libero ullam impedit?</p>
+        <h1>Quod, aspernatur cumque.</h1>
+        <p>Rerum dignissimos et vitae architecto. Doloremque nostrum ducimus expedita minima itaque veniam. Architecto, quo quisquam corrupti ad sed excepturi vel, voluptates nostrum sunt enim consequuntur rerum, consectetur aspernatur accusamus id?</p>
+        <h1>Magni, blanditiis quo.</h1>
+        <p>Ullam voluptatibus tempore, molestias hic autem fugit possimus velit vitae, suscipit est rem quo ea totam inventore! Numquam, quis officia consequatur nesciunt repellat eius similique at aperiam aliquam! Molestiae, quam.</p>
+        <h1>Voluptatibus, corporis repellendus.</h1>
+        <p>Exercitationem minima, deserunt odio incidunt quia expedita perferendis, magnam non pariatur molestiae magni itaque necessitatibus aspernatur, quod eius repellendus veritatis impedit atque quam officiis mollitia placeat tenetur iure! Labore, adipisci.</p>
+        <h1>Hic, eos soluta!</h1>
+        <p>Sequi, officia, officiis culpa magni ab tempora ipsum in, nostrum neque quaerat quis voluptatum quisquam! Blanditiis, ducimus adipisci quae quisquam at similique, eius earum esse, ipsam officia dignissimos dolore. Placeat!</p>
+        <h1>Optio, maiores voluptas?</h1>
+        <p>Eligendi, quam ea reprehenderit itaque autem at perferendis cumque sit incidunt saepe illum? Voluptate unde accusamus, vero excepturi architecto maxime ipsam repellendus, quae reprehenderit aperiam tempore praesentium provident ab eligendi?</p>
+        <h1>Officiis, veritatis aspernatur!</h1>
+        <p>Consequatur ratione odio dolorem modi provident velit, incidunt et aliquam necessitatibus distinctio aliquid illo quidem itaque error doloribus laudantium non nesciunt. Delectus numquam, atque fugit tenetur assumenda quis reiciendis earum.</p>
+        <h1>Quas, libero quidem.</h1>
+        <p>Tempora labore totam quidem, numquam, facere, repellendus laudantium ipsam molestiae ducimus aliquid id! Soluta perferendis quisquam, quae quibusdam aliquid, doloribus minima qui quod animi expedita harum ullam fugit non maxime!</p>
+    </div>
+    <div class="ad-container"></div>
+</div>
+
+</body>
+</html>
