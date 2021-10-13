@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>absolute practice</title>
+    <style>
+        .main-menu-item {
+            font-size: 30px;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+            width: 150px;
+            height: 90px;
+            border-top: 5px solid aquamarine;
+            position: relative;
+        }
+
+        .sub-menu {
+            background-color: darkred;
+            color: lavender;
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 150px;
+            font-size: 20px;
+        }
+
+        .main-menu-item:hover > .sub-menu {
+            display: block;
+        }
+
+        .main-menu-item:hover {
+            border-left-color: yellow;
+        }
+    </style>
+</head>
+<body>
+     <!-- .main-menu>.main-menu-item*5>lorem1+.sub-menu>.sub-menu-item*5>lorem1 --> 
+        <div class="main-menu">
+            <div class="main-menu-item">
+                chapter1
+                <div class="sub-menu">
+                    <div class="sub-menu-item">Lorem.</div>
+                    <div class="sub-menu-item">Laudantium.</div>
+                    <div class="sub-menu-item">Veniam?</div>
+                    <div class="sub-menu-item">Vel.</div>
+                    <div class="sub-menu-item">Sit.</div>
+                </div>
+            </div>
+            <div class="main-menu-item">
+                chapter2
+                <div class="sub-menu">
+                    <div class="sub-menu-item">Lorem.</div>
+                    <div class="sub-menu-item">Neque.</div>
+                    <div class="sub-menu-item">Praesentium?</div>
+                    <div class="sub-menu-item">Repellendus.</div>
+                    <div class="sub-menu-item">Quis.</div>
+                </div>
+            </div>
+            <div class="main-menu-item">
+                chapter3
+                <div class="sub-menu">
+                    <div class="sub-menu-item">Lorem.</div>
+                    <div class="sub-menu-item">Autem?</div>
+                    <div class="sub-menu-item">Fuga.</div>
+                    <div class="sub-menu-item">Repellendus!</div>
+                    <div class="sub-menu-item">Officiis?</div>
+                </div>
+            </div>
+            <div class="main-menu-item">
+                chapter4
+                <div class="sub-menu">
+                    <div class="sub-menu-item">Lorem.</div>
+                    <div class="sub-menu-item">Provident!</div>
+                    <div class="sub-menu-item">Facilis.</div>
+                    <div class="sub-menu-item">Perferendis.</div>
+                    <div class="sub-menu-item">Cumque.</div>
+                </div>
+            </div>
+            <div class="main-menu-item">
+                chapter5
+                <div class="sub-menu">
+                    <div class="sub-menu-item">Lorem.</div>
+                    <div class="sub-menu-item">Vitae!</div>
+                    <div class="sub-menu-item">Voluptate.</div>
+                    <div class="sub-menu-item">Consectetur!</div>
+                    <div class="sub-menu-item">Magnam?</div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

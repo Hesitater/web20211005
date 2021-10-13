@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>z-index</title>
+    <style>
+        img {
+            position: absolute;
+            z-index: -1; 
+            /* 값이 작을 수록 눈에서 멀어짐*/
+        }
+        span {
+            /* position: relative;
+            z-index: 999; */  
+            /*z-index는 position 적용된 것에 사용 가능*/
+            color: white;
+            background-color: black;
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- div>img+span -->
+    <div>
+        <img src="김태희.jfif" alt="">
+        <span>와~ 김태희~!</span>
+    </div>
+</body>
+</html>
