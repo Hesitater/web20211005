@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>group selector</title>
+    <style>
+        h1, p {
+            color: yellowgreen;
+        }
+        #myheader, #mypara, .myclass {
+            background-color: brown;
+        }
+
+        #mypara {
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>그룹 선택자</h1>
+    <p>,로 여러 선택자를 작성할 수 있음</p>
+
+    <!-- (h1>lorem3^p>lorem5)*3 -->
+    <h1 id="myheader">Lorem, ipsum dolor.</h1>
+    <p id="mypara">Lorem ipsum dolor sit amet.</p>
+    <h1 class="myclass">Doloremque, nam natus.</h1>
+    <p>Veniam exercitationem cumque ducimus aspernatur?</p>
+    <h1>Nemo, maiores at.</h1>
+    <p>Libero ab natus fugit dolore.</p>
+</body>
+</html>
