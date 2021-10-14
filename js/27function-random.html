@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>random</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" value="5">
+    <button onclick="showRandom();">랜덤값 출력</button>
+<script>
+function showRandom() {
+    let val = document.querySelector("input").value;
+    val = Number(val);
+
+    // genRandom 함수 정의
+    let r = genRandom(val);
+    console.log(r);   // 1 ~ val 사이의 임의의값 출력
+
+}
+
+function genRandom(val) {
+//    let r = Math.random()*val;
+//    r = parseInt(r);
+//     r +=1;
+//     return r;
+    return parseInt(Math.random() * val)+1;   //선생님의한줄...
+}
+
+
+</script>
+</body>
+</html>
