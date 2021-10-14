@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title></title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<script>
+function func1(a) {
+    console.log(a);
+}
+
+function func2(a , b) {
+    console.log(a);
+    console.log(b);
+}
+
+func1();
+func1(3);
+func1("The Unkillable Demon King");
+func1("js", "css");                 // js만 출력되고 css는 무시됨
+
+console.log("===========func2========");
+func2();
+func2(1);               // 1나오고 undefined가 나옴
+func2(3,4);
+func2(5,6,7);           // parameter 2개 받기때문에 5,6 나오고 7은 무시
+
+</script>
+</body>
+</html>
