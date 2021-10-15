@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>dom get element</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- p.note#para$*3>lorem1 -->
+    <p class="note" id="para1">이상혁</p>
+    <p class="note" id="para2">Faker</p>
+    <p class="note" id="para3">The Unkillable Demon King</p>
+<script>
+    //샘 sol 반복문안쓰구
+    //console 모든 p요소의 content가 출력
+
+    let paras = document.querySelectorAll(".note");
+    console.log(paras[0].innerHTMl);
+    console.log(paras[1].innerHTML);
+    console.log(paras[2].innerHTML);
+    
+    //모든 p요소의 content를 "hello" 변경
+    paras[0].innerHTML ="hello";
+    paras[1].innerHTML ="hello";
+    paras[2].innerHTML ="hello";
+
+
+  //console 모든 p요소의 content가 출력
+    //모든 p요소의 content를 "hello" 변경
+
+   //내가 한것 
+  /* let f = document.querySelectorAll(".note");
+    console.log(f.length); 
+   console.log(f[0].innerHTML);
+    console.log(f[1].innerHTML);
+    console.log(f[2].innerHTML);
+    for (var i = 0; i < f.length; i++) {
+        console.log(f[i].innerHTML);
+    }
+
+    for (let i = 0; i < 3; i ++) {
+        f[i].innerHTML ="hi hello 안녕?"
+    }
+*/
+</script>
+</body>
+</html>

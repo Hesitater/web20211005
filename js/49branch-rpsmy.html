@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>내가만든 ..코드복잡한</title>
+    <style>
+        #comid {
+            font-size: 48px;
+            color: cyan;
+        }
+        #userid {
+            color: red;
+            font-size: 48px;
+        }
+        .fas#user {
+            color: blueviolet;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- button{가위,바위,보} -->
+    <!-- <button onclick="rps();">가위,바위,보</button> -->
+    
+    <!-- button[onclick]*3 -->
+    <button onclick="rps(0)">가위</button>
+    <button onclick="rps(1)">바위</button>
+    <button onclick="rps(2)">보</button>
+    
+    <!-- div>span>i.fas -->
+    <div id="comid">
+        <span>
+            <i class="fas"></i>
+        </span>
+    </div>
+    <!-- div>h1 -->
+    <div><h1 id="result">가보자가보자가보자</h1></div>
+    <div id="userid" >user는 무엇을?
+        <span>
+            <i class="fas" id="user"></i>
+        </span>
+    </div>
+  <!-- #result>div>span#win^div>span#lose^div>span#tie -->
+  <div id="result">
+    <div>승
+        <span id="win">0</span>
+    </div>
+    <div>패
+        <span id="lose">0</span>
+    </div>
+    <div>비김
+        <span id="tie">0</span>
+    </div>
+</div>
+
+<script>
+    function increase(selector)  {
+        let elem = document.querySelector(selector);
+        let n = Number(elem.innerHTML);
+        elem.innerHTML = n + 1;
+    }
+
+function rps(user) {
+    let r = Math.random();
+    // console.log(r);
+    r = parseInt(r*3);
+    // console.log(r);
+
+// icon 은 컴퓨터rps아이콘,  vs는 내가내는 rps 아이콘
+    let icon = document.querySelector("i");
+    icon.classList.remove("fa-hand-rock","fa-hand-paper","fa-hand-scissors")
+    
+    let vs = document.querySelector("#user");
+    vs.classList.remove("fa-hand-rock","fa-hand-paper","fa-hand-scissors")
+
+// 컴 rps 아이콘 화면에 추가
+    if (r == 0) {
+        // console.log("가위");
+        icon.classList.add("fa-hand-scissors")
+    } else if ( r ==1) {
+        // console.log("바위");
+        icon.classList.add("fa-hand-rock")
+    } else {
+        // console.log("보");
+        icon.classList.add("fa-hand-paper")
+    }
+
+// 내가 내는 rps가 뭔지 눈으로 못알아볼까봐 + 첨에 코드작성할떄 계획
+    if (user ==1) {
+        console.log("user바위");
+    } else if (user == 2) {
+        console.log("user보자기");
+    } else {
+        console.log("user가위");
+    }
+
+ // 멍청하게 rps 경우의수 9가지 다 고려   
+    if ( (r == 0 && user==1) || (r == 1 && user ==2) || (r==2 && user == 0)) {
+        document.querySelector("#result").innerHTML = "user 승리";
+        increase("#win");
+    } else if( (r==1 && user ==0) || (r==2 && user==1) || (r==0 && user ==2) ) {
+        document.querySelector("#result").innerHTML = "컴터승리";
+        increase("#lose");
+    } else {
+        document.querySelector("#result").innerHTML = "비김 re?";
+        increase("#tie");
+    }
+
+// 내가 내는 rps 화면에  추가
+    if (user == 0) {
+        vs.classList.add("fa-hand-scissors")
+    } else if ( user ==1) {
+        vs.classList.add("fa-hand-rock")
+    } else {
+        vs.classList.add("fa-hand-paper")
+    }
+}
+    
+</script>
+</body>
+</html>

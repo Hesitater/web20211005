@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>class</title>
+    <style>
+        div {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    <!-- button*3{가위} -->
+    <button onclick="changeHand('fa-hand-scissors');">가위</button>
+    <button onclick="changeHand('fa-hand-rock');">바위</button>
+    <button onclick="changeHand('fa-hand-paper');">보</button>
+
+    <!-- div>span>i -->
+    <div>
+        <span>
+            <i></i>
+        </span>
+    </div>
+<script>
+function changeHand(param) {
+    let icon = document.querySelector("i");
+    icon.classList.remove('fa-hand-scissors', 'fa-hand-rock', 'fa-hand-paper');
+    icon.classList.add("fas");
+    icon.classList.add(param);
+}
+
+
+</script>
+</body>
+</html>

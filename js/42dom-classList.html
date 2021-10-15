@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title></title>
+    <style>
+        span {
+            background-color: violet;
+        }
+        i {
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <!-- span>i.far.fa-heart -->
+    <span onclick="toggleHeart();"><i class="far fa-heart"></i></span>
+    <!-- <p onclick="toggleHeart();"><i class="far fa-heart"></i></p>
+    <div onclick="toggleHeart();"><i class="far fa-heart"></i></div> -->
+
+<script>
+
+function toggleHeart() {
+    let hc = document.querySelector("i");
+    hc.classList.toggle("far");
+    hc.classList.toggle("fas");
+    // let hc = document.querySelectorAll("i");
+    // for (var i = 0; i < hc.length; i ++) {
+    //     hc[i].classList.toggle("far");
+    //     hc[i].classList.toggle("fas");
+    // }
+}
+    
+</script>
+</body>
+</html>

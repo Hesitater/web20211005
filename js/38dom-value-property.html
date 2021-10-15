@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>value</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- input#input1+p*5>lorem1 -->
+    <input type="text" id="input1">
+    <p onclick="changeVal(0);">
+        Lorem.
+    </p>
+    <p onclick="changeVal(1);">
+        Dolor.
+    </p>
+    <p onclick="changeVal(2);">
+        Veniam.
+    </p>
+    <p onclick="changeVal(3);">
+        Libero?
+    </p>
+    <p onclick="changeVal(4);">
+        Est.
+    </p>
+<script>
+
+function changeVal(idx) {
+    let paras = document.querySelectorAll("p");
+    // console.log(paras[idx].innerHTML);
+    // let val = paras[idx].innerHTML;
+    let val = paras[idx].innerHTML.trim();
+    document.querySelector("#input1").value = val;
+}
+/*
+function changeVal(idx) {
+    let paras = document.querySelectorAll("p");
+    // console.log(paras[idx].innerHTML);
+    document.querySelector("#input1").value = paras[idx].innerHTML.trim();
+}
+*/
+
+</script>
+</body>
+</html>

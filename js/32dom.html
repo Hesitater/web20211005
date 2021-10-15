@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- html>body>h1>lorem1^p>lorem1 -->
+<html>
+    <body>
+        <h1 id="head1">Hello</h1>
+        <p id="Faker">The Unkillable Demon King</p>
+        <button onclick="func1();">이버튼</button>
+        <script>
+            let h = document.getElementById("head1");
+            console.log(h);
+            console.log(h.innerHTML);
+            h.innerHTML = "hi";
+
+            //p 요소의 content를 출력하고 
+            //p요소의 content를 "한글" 로 변경
+
+            let f =document.getElementById("Faker");
+            // console.log(f);
+            console.log(f.innerHTML);
+            f.innerHTML = "불사대마왕";
+function func1() {       
+    alert("faker shockwave");
+}
+
+
+        </script>
+    </body>
+</html>
