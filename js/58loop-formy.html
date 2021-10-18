@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>for</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- input#input1+button{구구단} -->
+<input type="text" id="input1">
+<button onclick="ggdan();">구구단</button>
+<h1 id="head1">몇단일까요</h1>
+<div id="div1"></div>
+<script>
+    
+function ggdan() {
+    let dan = document.querySelector("#input1");
+    // let hElem = document.querySelector("#head1")
+    // hElem.innerHTML = "구구단" + dan.value + "입니다";
+    let hElem = "";
+    hElem = "구구단" + dan.value + "입니다";
+    document.querySelector("#head1").innerHTML = hElem;
+
+    
+
+    dan = Number(dan.value);
+    let content = "";
+    console.log("------------"+ dan + "--------------");
+    for (var i = 1; i <=9; i++) {
+        console.log(dan + " X " + i + " = " + (dan*i));
+        content += dan + " X " + i + " = " + (dan*i) +"<br>";
+    }
+    console.log("---------------------------");
+    document.querySelector("#div1").innerHTML = content;
+}
+    
+
+</script>
+</body>
+</html>

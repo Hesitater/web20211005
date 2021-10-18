@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title></title>
+    <style>
+        #input1 {
+            color: red;
+        }
+        #input2 {
+            color: blue;
+        }
+        #result {
+            background-color: blueviolet;
+            color: white;
+        }
+        #sum {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<!-- input#input$*2+button{합}+h1#result{결과} -->
+<input type="text" id="input1">
+<input type="text" id="input2">
+<button onclick="sum();">합</button>
+<button onclick="sum1();">선생님합</button>
+<h1 id="result">결과</h1>
+<div id="sum"></div>
+<script>
+//내가 쓴것
+function sum() {
+    let lower = Number(document.querySelector("#input1").value);
+    let upper = Number(document.querySelector("#input2").value);
+    console.log(lower);
+    console.log(upper);
+
+    let sum = 0;
+    let content;
+    for ( let i = lower; i <= upper; i ++ ) {
+        sum += i;
+    }
+    console.log(lower + "~" +upper + "까지 합 : " + sum);
+    content = lower + "~" +upper + "까지 합 :" + sum;
+    document.querySelector("#sum").innerHTML = content;
+}
+//선생님 코드
+function sum1() {
+    let num1 = Number(document.querySelector("#input1").value);
+    let num2 = Number(document.querySelector("#input2").value);
+
+    let sum1 = 0;
+    for ( let i = num1; i<=num2; i++) {
+        sum1+= i;
+    }
+
+    document.querySelector("#result").innerHTML = sum1;
+    // document.querySelector("#sum").innerHTML = num1
+}
+
+
+</script>
+</body>
+</html>

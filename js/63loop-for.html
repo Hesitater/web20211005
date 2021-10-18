@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>for63</title>
+    <style>
+        .ball {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;  align-items: center;
+            font-size: 48px;    font-weight: bold;  margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- button{로또}+.ball*6 -->
+<button onclick="lotto();" >로또</button>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<script>
+function lotto() {
+    let balls = document.querySelectorAll(".ball");
+    
+    for (let i = 0; i <balls.length; i++) {
+        balls[i].innerHTML = parseInt(Math.random()*45) + 1;
+    }
+}
+for (var j in lotto) {
+        if(num == lotto[j]) {
+            num = Math.floor(Math.random()*44) +1;
+        }
+    }
+    lotto.push(num);
+
+//내가한것
+// function lotto() {
+//     let index = 0;
+//     for (let i = 0; i <=5; i++) {
+//         let RN = parseInt(Math.random()*45) +1 ;
+//             document.querySelectorAll("div")[i].innerHTML = RN;
+//     }
+// }
+
+</script>
+</body>
+</html>

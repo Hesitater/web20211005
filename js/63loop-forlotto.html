@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>로또생성</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<script>
+//1. 로또 번호는 6개
+var lotto = [];  //6개로 값이 나열될 것이기 때문에 배열 처리 값은 담지 않음
+
+//6번 처리 -반복문
+for ( var i = 0; i < 6; i++) {
+    //새로 추가될 숫자 1~45 랜덤
+    // random() : 0~1사이 랜덤한 소수  ,floor() : 내림처리해서 정수로 변경
+    var num = Math.floor(Math.random()*44) +1;
+
+    //같은 숫자 나왔으면 안되
+    for (var j in lotto) {
+        if(num == lotto[j]) {
+            num = Math.floor(Math.random()*44) +1;
+        }
+    }
+    //push() - 배열에 마지막에 값 추가 메서드
+    lotto.push(num);
+}
+//오름 차순으로 정렬
+lotto.sort(function (a,b) {
+   return a-b; 
+});
+document.write("이번주 로또 번호 : " + lotto);
+
+for(var i=0;i<6;i++){
+
+     var num = Math.floor(Math.random() * 44) + 1;
+    for(var j in lotto){
+        if(num == lotto[j]){ //현재 새로나온 숫자가 기존 숫자와 같으면
+            num = Math.floor(Math.random() * 44) + 1;
+        }
+    }
+    lotto.push(num);
+}
+ document.write('이번주 로또 번호 : ' + lotto);
+</script>
+</body>
+</html>

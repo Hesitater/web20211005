@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>for63</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- button{로또}+.ball*6 -->
+<button onclick="lotto();" >로또</button>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+<script>
+function lotto() {
+    //1. 로또 번호는 6개
+    var lottoNumber = [];
+
+    for ( var i = 0; i<6; i++) {
+        var num = parseInt(Math.random()*44) + 1;
+        
+        for (var j in lottoNumber) {
+            if( num == lotto[j]) {
+                num == parseInt(Math.random()*44) + 1;
+            }
+        } 
+        lottoNumber.push(num);
+    }
+    lottoNumber.sort(function(a,b) {
+        return a - b;
+    });
+    
+    let balls = document.querySelectorAll(".ball");
+    for (let i = 0; i <balls.length; i++) {
+        balls[i].innerHTML = lottoNumber[i];
+    }
+}
+</script>
+</body>
+</html>
