@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>switch not break;</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- input#input1+button{확인}+h1#result{결과} -->
+<input type="text" id="input1">
+<button onclick="show();">확인</button>
+<h1 id="result">결과</h1>
+<script>
+function show() {
+    let value = document.querySelector("#input1").value;
+    
+    let message;
+  
+    switch (value){
+        case "a":
+        case "A":
+            message = value + "등급, 90점이상입니다";
+            break;
+        case "b":
+        case "B":
+            message = value + "등급, 80점이상입니다";
+            break;
+        case "c":
+        case "C":
+            message = value + "등급, 70점이상입니다";
+            break;
+        case "d":
+        case "D":
+            message = value + "등급, 60점이상입니다";
+            break;
+        default:
+            message = "잘못입력했음";
+            break;
+    }
+
+    document.querySelector("#result").innerHTML = message;
+}
+
+</script>
+</body>
+</html>

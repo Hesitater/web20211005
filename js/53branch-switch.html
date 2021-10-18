@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>switch</title>
+    <style>
+        #result {
+            background-color: violet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<!-- select#select1>option*4 -->
+<select onchange="GS();" name="grade" id="select1">
+    <option value="A">A</option>        <!-- 90점 이상입니다 -->
+    <option value="B">B</option>        <!-- 80점 이상입니다 -->
+    <option value="C">C</option>        <!-- 70점 이상입니다 -->
+    <option value="D">D</option>        <!-- 60점 이상입니다 -->
+</select>
+    <!-- h1#result{결과} -->
+    <h1>결과</h1>
+    <h1 id="result">등급</h1>
+<script>
+function GS() {
+    let val = document.querySelector("#select1").value;
+
+    let message;
+    switch (val) {
+        case "A":
+            message = val + "등급, 90점이상입니다"
+            break;
+        case "B":
+            message = val + "등급, 80점이상입니다"
+            break;
+        case "C":
+            message = val + "등급, 70점이상입니다"
+            break;
+        case "D":
+            message = val + "등급, 60점이상입니다"
+            break;
+        default:
+            break;
+    }
+    document.querySelector("#result").innerHTML = message;
+}
+
+// 내가 한것
+// function GS() {
+//     let gradeElem= document.querySelector("#select1");
+//     let grade = gradeElem.value;
+//     console.log(grade);
+//     let messageElem = document.querySelector("#result")
+//     let message;
+        
+//     switch (gradeElem.value) {
+//         case "A":
+//             message = grade + "등급입니다 90점 이상이군요";
+//             break;
+//         case "B":
+//             message = grade + "등급입니다 80점 이상이군요";
+//             break;
+//         case "C":
+//             message = grade + "등급입니다 70점 이상이네";
+//             break;
+//         case "D":
+//             message = grade + "등급입니다 60점..이상...:(";
+//             break;
+//     }
+//     messageElem.innerHTML = message;
+// } 
+</script>
+</body>
+</html>
