@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>숫자 맞추기</title>
+    <style>
+        #result {
+            color: blueviolet;
+        }
+        #result1 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- input+button -->
+    <input type="text">
+    <button onclick="guess();">확인</button>
+
+    <!-- h1#result -->
+    <h1 id="result"></h1>
+    <h1 id="result1"></h1>
+<script>
+    let randomNumber = parseInt(Math.random()*100) +1 ;
+    console.log("랜덤수 :" + randomNumber);
+
+function guess() {
+     let userInputNumber = Number(document.querySelector("input").value);
+
+     console.log("user", userInputNumber);
+     console.log("computer", randomNumber);
+
+     let messageElem = document.querySelector("#result")
+
+     let message;
+
+     if ( userInputNumber == randomNumber) {
+         message = "정답입니다.";
+     } else if (userInputNumber < randomNumber) {
+         message = "더 큰값을 입력해보세요";
+     } else {
+         message = "더 작은 값을 입력해보세요";
+     }
+     messageElem.innerHTML = message;
+
+     //내가 한 헛짓거리;
+     if ( userInputNumber == randomNumber) {
+         document.querySelector("#result1").innerHTML = userInputNumber + " :와!! 랜덤값 내가 맞춤";
+     } else if ( userInputNumber > randomNumber) {
+         document.querySelector("#result1").innerHTML = userInputNumber + ">" + randomNumber + "아쉽지만..더크네용";
+     } else {
+         document.querySelector("#result1").innerHTML = userInputNumber + "<" + randomNumber + "허허.. 조금더 인심 쓰면..?";
+     }
+}
+
+
+
+</script>
+</body>
+</html>
