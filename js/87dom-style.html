@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title></title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- button{숨기기}+h1>lorem3 -->
+<button>숨기기</button>
+<button id="showButton">보여주기</button>
+<h1>
+    Lorem, ipsum dolor.
+</h1>
+
+<script>
+document.querySelector("button").addEventListener("click",function() {
+    document.querySelector("h1").style.display = "none";
+})
+
+//querySelectorAll로 다가져와서 인덱스번호로 했음
+// let barr = document.querySelectorAll("button");
+// let button1= barr[1];
+// button1.addEventListener("click", function () {
+//    document.querySelector("h1").style.display = "block";
+// });
+document.querySelector("#showButton").addEventListener("click", function () {
+    document.querySelector("h1").style.display = "block";
+});
+
+
+
+</script>
+</body>
+</html>
