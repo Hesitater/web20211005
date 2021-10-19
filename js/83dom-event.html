@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>83dom event property</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- h1#head1>lorem1 -->
+<h1 id="head1">
+    Lorem.
+</h1>
+<script>
+
+//안되는 함수
+// document.querySelector("#head1").onclick = function () {
+//     console.log("1번 업무");
+// }
+
+// document.querySelector("#head1").onclick function () {
+//     console.log("2번임무");
+// }
+
+document.querySelector("#head1").onclick =function () {
+    task1();
+    task2();
+    
+}
+function task1() {
+    console.log("1번임무");
+}
+
+function task2() {
+    console.log("2번임무");
+}
+
+</script>
+</body>
+</html>
