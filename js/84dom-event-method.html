@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>addEventListner</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- h1#head1>lorem1 -->
+<h1 id="head1">
+    Lorem.
+</h1>
+<script>
+let head = document.querySelector("#head1");
+//아래 코드와 같은일 함
+// head.onclick = function() {
+//     console.log("업무 !!!!!!");
+// }
+
+//파라미터1 : 이벤트명
+//파라미터2 : 실행할 함수
+head.addEventListener("click",function()  {
+    console.log("업무 !!!!!!!!");
+});
+
+</script>
+</body>
+</html>
