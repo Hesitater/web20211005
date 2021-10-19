@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>while74</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- input#input1+button{구구단 출력} -->
+    <input type="text" id="input1">
+    <button onclick="gugudan();">구구단 출력</button>
+    <div>구구단 출격</div>
+    <div id="div1"></div>
+<script>
+    function gugudan() {
+        let dan = Number(document.querySelector("#input1").value);
+        let i  = 1;
+        // let gu = document.querySelector("#div1");
+        while (i <=9) {
+        let result = dan + " x " + i + " = " + (dan*i);
+        console.log(result);
+        document.querySelector("#div1").innerHTML += result + "<br>";
+        i++;
+    }
+}
+</script>
+</body>
+</html>
