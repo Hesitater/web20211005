@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>96object</title>
+    <style>
+        /* li:last-child {
+            color: blue;
+        } */
+    </style>
+</head>
+<body>
+<!-- {item}+input#input1+button{+}+ul#list1 -->
+item
+<input type="text" id="input1">
+<button>+</button>
+<ul id="list1">
+    <li>1, lorem</li>
+</ul>
+<script>
+// let number = 1;
+// document.querySelector("button").addEventListener("click", function () {
+//    //코드 작성
+//    let text = document.querySelector("#input1").value;
+//    number++;
+//    let data = {
+//        item : text,
+//        num : number
+//     };
+    
+//    document.querySelector("#list1").innerHTML += `<li>${data.num}, ${data.item}</li>`;
+// });
+
+let num = 2;
+document.querySelector("button").addEventListener("click", function () {
+   //코드 작성
+   let val = document.querySelector("#input1").value;
+    let data = {
+        item : val,
+        num : num +1
+    };
+    
+    data.num = num++;
+    
+   document.querySelector("#list1").innerHTML += `<li>${data.num}, ${data.item}</li>`;
+   document.querySelector("#input1").value = "";
+});
+
+</script>
+</body>
+</html>
