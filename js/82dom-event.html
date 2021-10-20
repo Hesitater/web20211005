@@ -21,6 +21,7 @@ document.querySelector("#input1").onkeyup = function () {
     let inputElem = document.querySelector("#input1");
     let headElem = document.querySelector("#head1");
     
+    console.log(inputElem.value);
     headElem.innerHTML = inputElem.value;
 
     let countElem = document.querySelector("#count");
