@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <title>Template literals(template string)</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!-- {name}+input#input1+{color}+input#input2+button{+} -->
+name
+<input type="text" id="input1">
+color
+<input type="text" id="input2">
+<button >+</button>
+
+<!-- ul#list1 -->
+<ul id="list1">
+    <li style="color: blue;">
+        Lorem.
+    </li>
+</ul>
+<script>
+    document.querySelector("button").addEventListener("click", function () {
+       let text = document.querySelector("#input1").value;
+       let colorName = document.querySelector("#input2").value; 
+
+       let ulElem = document.querySelector("#list1");
+       ulElem.innerHTML += `<li style= "color : ${colorName};">${text}</li>`;
+        //인풋창 입력후 더하기 버튼 누른후 그안에 내용물을 사라지게
+       document.querySelector("#input1").value = "";
+        document.querySelector("#input2").value = "";
+    });
+    
+
+</script>
+</body>
+</html>
