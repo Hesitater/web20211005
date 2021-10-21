@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("h1").click(function () {
+                console.log("h1 클릭됨~!");
+                //this : 이벤트가 발생된 element object(dom)
+                console.log(this.innerHTML);
+            })
+            $("#p4").click(function () {
+                console.log("id=p4 만 클릭됨");
+                console.log(this.innerHTML);
+            })
+        });
+    </script>
+</head>
+<body>
+<!-- h1*5>lorem1 -->
+<h1>Lorem .</h1>
+<h1>ipsum </h1>
+<h1>dolor </h1>
+<h1>sit </h1>
+<h1> amet.</h1>
+
+<p id="p1" >Lorem, ipsum dolor.</p>
+<p id="p2" >Aliquam, quo nostrum!</p>
+<p id="p3">Nihil, itaque quas?</p>
+<p id="p4">Iusto, asperiores perspiciatis.</p>
+<p id="p5">Modi, voluptatibus. Voluptates?</p>
+<script>
+
+</script>
+</body>
+</html>
