@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>41 get attribute</title>
+    <style>
+        
+    </style>
+    <script>
+        $(document).ready(function() {
+            let str1 = $("#link1").attr("href");
+            console.log(str1);
+            console.log($("#link2").attr("href"));
+            let str3 = $("#link3").attr("href");
+            console.log($("#link3").attr("href"));
+
+            let str4 = $("#link4").attr("href");
+            console.log(str4);
+            let str5 = $("#link5").attr("href");
+            console.log(str5);
+        });
+    </script>
+</head>
+<body>
+<!-- a*3#link$ -->
+<a href="https://www.daum.net" id="link1"></a>
+<a href="https://www.naver.com" id="link2"></a>
+<a href="https://www.google.com" id="link3"></a>
+
+<a href="file:///C:/Users/user/Desktop/course/web/HTML5/HTML5-web-programming/chapter3/audio_source.html" id="link4"></a>
+<a href="https://www.hanbit.co.kr/images/common/logo_hanbit.png" id="link5"></a>
+<a href="" id="link6"></a>
+
+<script>
+
+</script>
+</body>
+</html>
