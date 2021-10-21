@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>24effect-toggle</title>
+    <style>
+        .button {
+            position: relative;
+            padding: 15px;
+            background-color: blueviolet;
+            color: white;
+        }
+        .menu {
+            position: absolute;
+            display: none;
+            font-size: 32px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+
+        }
+        body {
+            margin-top: 0px; margin-left: 0px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            // $(".menu").hide();
+            $(".button").click(function () {
+                $(".menu").toggle();
+            })
+        });
+    </script>
+</head>
+<body>
+<!-- .button>i.fas.fa-bars+.menu>.item*5>lorem1 -->
+<div class="button">
+    <i class="fas fa-bars"></i>
+    <div class="menu">
+        <div class="item">Lorem.</div>
+        <div class="item">Ad?</div>
+        <div class="item">Recusandae!</div>
+        <div class="item">Quasi?</div>
+        <div class="item">Ad.</div>
+    </div>
+</div>
+
+<!-- h1>lorem1^p>lorem1 -->
+<h1>Lorem.</h1>
+<p>Lorem.</p>
+<script>
+
+</script>
+</body>
+</html>
