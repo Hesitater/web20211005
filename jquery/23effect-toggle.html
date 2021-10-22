@@ -8,20 +8,16 @@
         
     </style>
     <script>
-        $(document).ready(function() {
-            $("h1").click(function () {
-                $("p").toggle();
+        // $(document).ready(function() {
+        //     $("h1").click(function () {
+        //         $("p").toggle();
+        //     })
+
+
+            $(document).ready(function() {
+            $(this).click(function () {
+                $(`p:not()`).toggle();
             })
-
-
-
-
-
-
-            // $(document).ready(function() {
-            // $(this).click(function () {
-            //     $(`not(${this})`).toggle();
-            // })
 
             // $("h1").on("click", function (params) {
             //     $("p").toggle();
