@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>62traversing-parent</title>
+    <style>
+        
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("span").click(function () {
+                $(this).parent().css("color", "red");
+            })
+        });
+    </script>
+</head>
+<body>
+<!-- h1*5>lorem1+span{red} -->
+<h1>Lorem.
+    <span>red</span>
+</h1>
+<h1>Velit?
+    <span>red</span>
+</h1>
+<h1>Quo.
+    <span>red</span>
+</h1>
+<h1>Suscipit.
+    <span>red</span>
+</h1>
+<h1>Possimus.
+    <span>red</span>
+</h1>
+<script>
+
+</script>
+</body>
+</html>
