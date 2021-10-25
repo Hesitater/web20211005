@@ -9,19 +9,19 @@
     </style>
     <script>
         $(document).ready(function() {
-            $("a").click(function () {
-                let val = $("input").val();
-                $("a").attr("href",`https://${val}`);
-            })
+            // $("a").click(function () {
+            //     let val = $("input").val();
+            //     $("a").attr("href",`https://${val}`);
+            // })
             // $("input").keyup(function () {
             //     let address = $("input").val();
             //     $("a").attr("href",`https://${address}`);
             // })
             
-            // $("input").keyup(function () {
-            //     let address= $(this).val();
-            //     $("a").attr("href",address)
-            // })
+            $("input").keyup(function () {
+                let address= $(this).val();
+                $("a").attr("href",address)
+            })
         });
     </script>
 </head>
